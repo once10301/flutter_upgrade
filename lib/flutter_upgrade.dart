@@ -95,12 +95,12 @@ class FlutterUpgrade {
     } else {
       List<Widget> actions = [];
       if (!force) {
-        actions.add(FlatButton(
+        actions.add(TextButton(
           child: Text('取消', style: TextStyle(color: Colors.black, fontSize: 14)),
           onPressed: () => Navigator.of(context).pop(),
         ));
       }
-      actions.add(FlatButton(
+      actions.add(TextButton(
         child: Text('立即下载', style: TextStyle(color: Theme.of(context).primaryColor, fontSize: 14)),
         onPressed: () async {
           if (apkDownloadUrl == null || apkDownloadUrl.isEmpty) {
